@@ -499,6 +499,8 @@ class CatalogPlugin {
         $categories = new CatalogCategories(GSDATAOTHERPATH . $this->id . '/categories/*.xml', $GLOBALS['SITEURL'] . $general->baseurl, ((string) $general->slugged == 'y' ? true : false));
         
         // meta information
+        $catalog = new CatalogDisplay($catalogurl, $breadcrumbs);
+        eval('?>' . $templates['header']);
         $data_index->title = (string) $general->title;
 
           echo '<ul class="categories">';
@@ -514,7 +516,7 @@ class CatalogPlugin {
             $categories = $categories->getCategories(true, 'order');
             
             foreach ($categories['parents'] as $category) {
-              echo '<li>';
+              echo '<li class="category ' . $category->getId() . '">';
               eval('?>' . $templates['main']);
               echo '</li>';
             }
@@ -525,7 +527,7 @@ class CatalogPlugin {
             $categories = $categories->getCategories(false, 'order');
 
             foreach ($categories as $category) {
-              echo '<li>';
+              echo '<li class="category ' . $category->getId() . '">';
               eval('?>' . $templates['main']);
               echo '</li>';
             }
