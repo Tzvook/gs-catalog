@@ -1,15 +1,15 @@
 <?php
 /** Hebrew Language file for Catalog
   */
-  
+
 $i18n = array(
   // registration
   'PLUGIN_TITLE'    => 'קטלוג',
   'PLUGIN_DESC'     => 'קטלוג מוצרים בסיסי',
-  'PLUGIN_SIDEBAR'  => 'Configure Catalog',
+  'PLUGIN_SIDEBAR'  => 'הגדרות הקטלוג',
   'CATALOG'         => 'קטלוג',
   'CATALOG_TITLE'   => 'כותרת הקטלוג',
-  
+
   // general terms
   'PARENT'          => 'קטגוריית אב',
   'CATEGORY'        => 'קטגוריה',
@@ -21,17 +21,17 @@ $i18n = array(
   'NAME'            => 'שם',
   'OPTIONS'         => 'הגדרות',
   'FEATURED'        => 'פריטים נבחרים',
-  
+
   // admin panel terms
   'RESET_OPTIONS'   => 'איפוס הגדרות',
-  'RESET_OP_SURE'   => 'This action is irreversible and will reset all of the current settings that you have. Are you sure?',
+  'RESET_OP_SURE'   => 'פעולה זו אינה ניתנת לביטול ותאפס את כל ההגדרות הנוכחיות שהגדרת. האם אתה בטוח?',
   'RESET_OP_SUCC'   => 'ההגדרות אופסו בהצלחה.',
   'RESET_OP_FAIL'   => 'לא ניתן היה לאפס את הקטלוג.',
   'CLEAR_CATALOG'   => 'ניקוי קטלוג',
-  'CLEAR_CAT_SURE'  => 'This action is irreversible and will delete all of your catalog categories and products. Are you sure?',
+  'CLEAR_CAT_SURE'  => 'פעולה זו אינה ניתנת לביטול, הפעולה תמחוק את כל הקטגוריות והמוצרים מהקטלוג. האם אתה בטוח?',
   'CLEAR_CAT_SUCC'  => 'הקטלוג נוקה בהצלחה.',
   'CLEAR_CAT_FAIL'  => 'לא ניתן היה לנקות את הקטלוג',
-  'BACKUP_CATALOG'  => 'גובוי קטלוג',
+  'BACKUP_CATALOG'  => 'גיבוי קטלוג',
   'HOME'            => 'ראשי',
   'NO_CATEGORIES'   => 'לא נמצאו קטגוריות',
   'CREATE_CATEGORY' => 'יצירת קטגוריה חדשה',
@@ -40,7 +40,7 @@ $i18n = array(
   'CAT_ORDER_FAIL'  => 'לא ניתן היה לסדר מחדש את הקטגוריות.',
   'CAT_CREATE_SUCC' => 'קטגוריה חדשה נוצרה בהצלחה.',
   'CAT_CREATE_FAIL' => 'לא ניתן היה ליצור את הקטגוריה.',
-  'CAT_NAMEEXISTS'  => 'Category id already exists. Create the category with a different name first.',
+  'CAT_NAMEEXISTS'  => 'מזהה הקטגוריה כבר קיים. צור את הקטגוריה עם שם שונה תחילה.',
   'CAT_EDIT_SUCC'   => 'הקטגוריה עודכנה בהצלחה.',
   'CAT_EDIT_FAIL'   => 'לא ניתן היה לעדכן את הקטגוריה.',
   'CAT_DEL_SUCC'    => 'הקטגוריה נמחקה בהצלחה.',
@@ -50,7 +50,7 @@ $i18n = array(
   'EDIT_PRODUCT'    => 'עדכון מוצר',
   'PROD_CRE_SUCC'   => 'מוצר חדש נוסף בהצלחה.',
   'PROD_CRE_FAIL'   => 'לא ניתן היה להוסיף קטגוריה.',
-  'PROD_NAMEEXISTS' => 'Product id already exists. Create the product with a different name first.',
+  'PROD_NAMEEXISTS' => 'מזהה המוצר כבר קיים. צור את המוצר עם שם שונה תחילה.',
   'PROD_EDIT_SUCC'  => 'המוצר עודכן בהצלחה.',
   'PROD_EDIT_FAIL'  => 'לא ניתן היה לעדכן את המוצר.',
   'PROD_DEL_SUCC'   => 'המוצר נמחק בהצלחה.',
@@ -58,22 +58,25 @@ $i18n = array(
   'PROD_DEL_SURE'   => 'פעולה זו אינה ניתנת לביטול וביצועה ימחק את המוצר הנוכחי. האם אתה בטוח?',
   'OPTIONS_UPD_SUCC'=> 'ההגדרות עודכנו בהצלחה.',
   'OPTIONS_UPD_FAIL'=> 'לא ניתן היה לעדכן את ההגדרות.',
+  'OPTIONS_UPLOAD_THEME_SUCC' => 'התבנית %s נשלחה בהצלחה אל השרת.',
+  'OPTIONS_UPLOAD_THEME_FAIL_NAME' => 'שם התבנית %s כבר קיים במערכת.',
+  'OPTIONS_UPLOAD_THEME_FAIL_TYPE' => 'על התבנית להיות קובץ .xml .',
   'MAIN'            => 'ראשי',
   'FIELD'           => 'שדות',
   'TYPE'            => 'סוג',
   'LABEL'           => 'תווית',
   'DEFAULT'         => 'ברירת מחדל',
   'PROD_PERPAGE'    => '# מוצרים בעמוד',
-  'VIEW_TYPE'       => 'View type',
+  'VIEW_TYPE'       => 'צורת התצוגה',
   'LIST_VIEW'       => 'תצוגת רשימה',
-  'PAGINATION'      => 'Pagination',
+  'PAGINATION'      => 'מיספור עמודים',
   'TOP'             => 'עליון',
   'BOTTOM'          => 'תחתון',
   'BOTH'            => 'שניהם',
   'SLUGGED'         => 'כתובות עמוד ידידותיות?',
   'INTERNAL_SEARCH' => 'חיפוש פנימי',
   'I18N_SEARCH'     => 'חיפוש i18n',
-  'I18N_SEARCH_PROD'=> 'i18n Search Product',
+  'I18N_SEARCH_PROD'=> 'חיפוש מוצרים i18n',
   'DETAILED_VIEW'   => 'תצוגה מפורטת',
   'CATEGORY_VIEW'   => 'תצוגה קטגורית',
   'HIERARCHICAL'    => 'תצוגה היררכית',
@@ -82,6 +85,8 @@ $i18n = array(
   'GENERAL'         => 'כללי',
   'TEMPLATE'        => 'תבנית',
   'TEMPLATES'       => 'תבניות',
+  'IMPORT'          => 'יבוא',
+  'EXPORT'          => 'יצוא',
   'HEADER'          => 'מיקטע עליון',
   'FOOTER'          => 'מיקטע תחתון',
   'PHOTOS'          => 'תמונות',
@@ -89,6 +94,10 @@ $i18n = array(
   'TEXT'            => 'טקסט',
   'TEXTAREA'        => 'תיבת טקסט',
   'CODEEDITOR'      => 'עורך קוד',
+  'WYSIWYG'         => 'עורך WYSIWYG',
+  'WYSIWYG_TOOLBAR' => 'סרגלי WYSIWYG',
+  'BASIC'           => 'בסיסי',
+  'ADVANCED'        => 'מתקדם',
   'WYSIWYG'         => 'עורך WYSIWYG',
   'IMAGE'           => 'תמונה',
   'CHECKBOX'        => 'תיבת סימון',
@@ -105,9 +114,9 @@ $i18n = array(
   'CURRENCY'        => 'מטבע',
   'LABELS'          => 'תוויות',
   'PRICE'           => 'מחיר',
-  'RATE'            => 'Rate',
+  'RATE'            => 'תעריף',
   'LANGUAGE'        => 'שפה',
-  'FLAT_RATE'       => 'Flat rate',
+  'FLAT_RATE'       => 'תעריף קבוע',
   'QUANTITY'        => 'כמות',
   'QUANTITY_RATE'   => 'Quantity rate',
   'TOTAL'           => 'סך-הכל',
@@ -116,9 +125,9 @@ $i18n = array(
   'TAX_SHIPPING'    => 'Tax shipping',
   'STYLE'           => 'Style',
   'AMAZONPAYM'      => 'Amazon Payments',
-  'GOOGLECHECK'     => 'Google Checkout',
+  'GOOGLECHECK'     => 'גוגל צ&rsquo;ק-אאוט',
   'PAYPAL'          => 'פיי-פאל',
   'CSS'             => 'CSS Properties',
 );
-  
+
 ?>
