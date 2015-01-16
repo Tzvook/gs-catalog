@@ -21,9 +21,14 @@ class CatalogBackEnd {
     return function_exists('i18n_init');
   }
 
-  // http://gilbert.pellegrom.me/php-quick-convert-string-to-slug/
+  // Tzvook: convert-string-to-slug the i18n way /
   public static function strtoslug($string) {
-    return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $string)));
+		global $i18n;
+        if (isset($i18n['TRANSLITERATION']) && is_array($translit=$i18n['TRANSLITERATION']) && count($translit>0))
+            {$string = str_replace(array_keys($translit),array_values($translit),$string);}
+		$string = to7bit($string, 'UTF-8');
+		$string = clean_url($string);
+		return $string;
   }
 
   private static function copyDefault($dir, $defaultDir) {
