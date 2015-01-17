@@ -14,7 +14,7 @@
   });
 </script>
 
-<form action="<?php echo $action; ?>" method="post">
+<form action="<?php echo $action; ?>" method="post" accept-charset="utf-8">
 
 <div class="edit-nav">
   <p>
