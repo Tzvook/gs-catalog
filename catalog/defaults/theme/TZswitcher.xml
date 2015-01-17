@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<theme><header><![CDATA[  <style type='text/css'>
+    #catcontainer ul { catlist-style: none; }
+#catcontainer .buttons { margin-bottom: 20px; }
+
+#catcontainer .catlist li { width: 100%; border-bottom: 1px dotted #CCC; margin-bottom: 10px; padding: 10px; background-color: rgba(221, 221, 221, 0.9);  }
+#catcontainer .catlist img { float: left; width: 80px; margin: 10px; padding: 10px; }
+#catcontainer .catlist h3 { margin: 0px; padding: 0px; }
+
+#catcontainer ul.catgrid {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+}
+#catcontainer ul.catgrid li {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 0 2.5% 2.5%;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-shadow: 0 0 5px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#catcontainer ul.catgrid li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+#catcontainer ul.catgrid li h3 {
+	margin: 0 0 5px;
+}
+#catcontainer ul.catgrid li p {
+	font-size: .9em;
+	line-height: 1.5em;
+	color: #999;
+}
+
+/* class for 3 columns */
+#catcontainer ul.catgrid.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+#catcontainer ul.catgrid.columns-4 li {
+	width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 1199px) {
+#catcontainer {
+		width: auto;
+		padding: 0 10px;
+	}
+}
+
+@media (max-width: 480px) {
+#catcontainer ul.catgrid {
+		margin-left: 0;
+	}
+#catcontainer ul.catgrid li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
+}
+
+  </style>
+<script type='text/javascript'>//<![CDATA[
+$(function(){
+$('button').on('click',function(e) {
+    if ($(this).hasClass('catgrid')) {
+        $('#catcontainer ul').removeClass('catlist').addClass('catgrid columns-3');
+    }
+    else if($(this).hasClass('catlist')) {
+        $('#catcontainer ul').removeClass('catgrid columns-3').addClass('catlist');
+    }
+});
+});//]]]]><![CDATA[>
+
+</script>
+
+<div class="catalog_breadcrumbs">
+	<?php catalog_output_breadcrumbs(); ?>
+</div>
+<div class="setlang">
+	Set catalog language:
+	<a href="?setlang=en">English</a> |
+	<a href="?setlang=he">Hebrew</a> |
+	<a href="?setlang=ru">Russian</a>
+</div>]]></header><indexheader><![CDATA[]]></indexheader><indexcategories><![CDATA[<div class="category">
+	<h3>
+		<a href="<?php echo catalog_get_category_url($category->get('slug')); ?>"><?php echo $category->get('title'); ?></a>
+	</h3>
+	<?php echo $category->get('description'); ?>
+</div>]]></indexcategories><indexfooter><![CDATA[]]></indexfooter><category><![CDATA[  <div id="catcontainer">
+    <div class="buttons">
+        <button class="catgrid">catgrid View</button>
+        <button class="catlist">catlist View</button>
+    </div>
+
+<!--heading (category information)-->
+<?php echo $category->get('description'); ?>
+
+<!--products in this category-->
+		<div id="three-columns" class="grid-container">
+    <ul class="catgrid columns-4">
+
+<?php foreach ($products as $product) : ?>
+				<li>
+<img src="<?php echo $product->get('image'); ?>" alt="">
+<a href="<?php echo catalog_get_product_url($product->get('slug')); ?>"><h3><?php echo $product->get('title'); ?></h3></a>
+<p>
+	<div>Stock: <?php echo $product->get('stock'); ?></div>
+	<div>Price: <?php echo $product->get('price'); ?></div>
+
+</p>
+				</li>
+<?php endforeach; ?>
+    </ul>
+		</div>
+<!--footer-->
+<br style="clear: both !important;">
+</div>
+<br style="clear: both !important;">]]></category><product><![CDATA[<img src="<?php echo $product->get('image'); ?>">
+<p>Stock: <?php echo $product->get('stock'); ?></p>
+<p>Price: £<?php echo $product->get('price'); ?></p>
+
+<?php echo $product->get('description'); ?>
+<?php echo $cart; ?>]]></product><searchresult><![CDATA[<h3 class="search-entry-title">
+  <a href="<?php echo $item->link; ?>">
+    <?php echo htmlspecialchars($item->title, ENT_NOQUOTES); ?>
+  </a>
+</h3>]]></searchresult><footer><![CDATA[<p><hr style="width: 100%; height: 1px; background-color: #290000; border: none"></p>]]></footer><css><![CDATA[    #container ul { list-style: none; }
+#container .buttons { margin-bottom: 20px; }
+
+#container .list li { width: 100%; border-bottom: 1px dotted #CCC; margin-bottom: 10px; padding-bottom: 10px; }
+
+#container .grid li { float: left; width: 20%; height: 50px; border-right: 1px dotted #CCC; border-bottom: 1px dotted #CCC; padding: 20px; }]]></css></theme>
